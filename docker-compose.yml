@@ -1,0 +1,10 @@
+services:
+  bot:
+    build: .
+    restart: always
+    environment:
+      bot_token: ${bot_token}
+      admin_id: ${admin_id}
+      db_path: ${db_path}
+    volumes:
+      - ./db:/app/db
